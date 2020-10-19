@@ -1,0 +1,47 @@
+@mixin pc {
+  @media screen and (min-width: 415px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 414px) {
+    @content;
+  }
+}
+
+$MIDNIGHT_900: #39454F;
+$MIDNIGHT_700: #4E677C;
+$MIDNIGHT_500: #8594A1;
+$MIDNIGHT_400: #B0BFCB;
+$MIDNIGHT_300: #E5E9ED;
+$MIDNIGHT_100: #FAFAFA;
+$MIDNIGHT_50: #FBFBFC;
+
+$SCRIM: #39454F3D;
+
+$WHITE_900: #FFFFFF;
+$WHITE_700: #FFFFFFBD;
+$WHITE_100: #FFFFFF3D;
+$WHITE_50: #FFFFFF1A;
+
+$BORDER: #F1F4F6;
+$BORDER_HEAVY: #BDCFDF;
+$BORDER_WHITE: #FFFFFF66;
+
+$ACCENT: #00ABAD;
+$ACCENT_50: #CEEDEE;
+$GRADIENT: linear-gradient(90deg, #20B2AB 0%, #3CA7B5 100%);
+
+$RED: #FF1F62;
+$ERROR: #FF1F62;
+
+$SHADOW_SHALLOW: 0px 2px 12px rgba(0, 0, 0, 0.02);
+$SHADOW_CARD: 0px 4px 12px rgba(24, 93, 95, 0.06);
+$SHADOW_HOVER: 0px 2px 12px rgba(24, 93, 95, 0.2);
+
+$PC_MIN_WIDTH: 880px;
+$PC_MAX_WIDTH: 1200px;
+$PC_HORIZONTAL_PADDING: 40px;
+
+$SP_HORIZONTAL_PADDING: 20px;

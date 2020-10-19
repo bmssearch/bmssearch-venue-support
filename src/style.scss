@@ -1,0 +1,72 @@
+@import "./theme.scss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: $MIDNIGHT_900;
+  line-height: 1.8;
+}
+
+main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 72px 0 24px;
+
+  &:first-child {
+    margin-top: 32px;
+  }
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 56px 0 24px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 26px;
+    width: 3px;
+    background-color: $ACCENT;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 32px 0 8px;
+}
+
+b {
+  font-weight: bold;
+}
+
+a {
+  color: $ACCENT;
+  text-decoration: none;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+.faq {
+  dt {
+    font-weight: bold;
+    font-size: 17px;
+    margin: 64px 0 12px;
+
+    &::before {
+      content: "Q.";
+    }
+  }
+}
