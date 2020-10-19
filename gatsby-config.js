@@ -1,20 +1,23 @@
-const path = require('path')
+const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: 'BMS SEARCH venue サポート',
+    title: "BMS SEARCH venue サポート",
     description: "BMS SEARCH venueに関するサポート情報を掲載しています。",
-    author: '@bmssearch',
+    author: "@bmssearch",
   },
-  plugins: [{
+  plugins: [
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
-          default: path.resolve('./src/components/layout.js')
+          default: path.resolve("./src/components/layout.tsx"),
         },
       },
     },
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -26,25 +29,22 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`
-      }
+        path: `${__dirname}/src/pages`,
+      },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-default-mdx-basic',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        name: "BMS SEARCH venue support",
+        short_name: "support",
+        start_url: "/",
+        icon: "src/images/favicon.png", // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
